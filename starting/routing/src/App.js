@@ -5,6 +5,7 @@ import HomePage from "./pages/Homepage";
 import AboutPage from "./pages/AboutPage";
 import MilenaPage from "./pages/MilenaPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import DynamicStudentNamesPage from "./pages/DynamicStudentNamesPage";
 
 function Navbar() {
   return (
@@ -12,7 +13,7 @@ function Navbar() {
       <Link to="/">Home</Link>
       <Link to="/about">About Page</Link>
       <Link to="/about/milena">Milena Page</Link>
-      <Link to="/about/monique">Monique Page</Link>
+      <Link to="/students/monique">Monique Page</Link>
     </nav>
   );
 }
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/about" component={AboutPage} />
         <Route exact path="/about/milena" component={MilenaPage} />
+        <Route exact path="/students/:id" component={DynamicStudentNamesPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
